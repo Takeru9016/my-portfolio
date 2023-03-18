@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    background: #090e16;
+    font-family: Bebas Neue, cursive;
+    color: white;
+  }
+}
