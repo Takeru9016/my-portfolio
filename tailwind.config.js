@@ -2,9 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      violets: "#7B4AE2",
-      pinks: "#F14D74"
+    extend: {
+      colors: {
+        vingo: "#7B4AE2",
+        pined: "#F14D74",
+      },
     },
   },
   plugins: [],
