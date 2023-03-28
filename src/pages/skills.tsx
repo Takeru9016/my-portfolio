@@ -1,9 +1,9 @@
-import { Navbar, Skills } from "@/components";
+import { Navbar, Academic } from "@/components";
 
 export default function skills() {
     return (
         <>
-            <Skills />
+            <Academic />
             <Navbar />
         </>
     )
