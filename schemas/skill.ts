@@ -6,16 +6,16 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'imahe',
-            title: 'Image',
+            name: 'icon',
+            title: 'Icon',
             type: 'image',
             options: {
                 hotspot: true,
             },
         },
         {
-            name: "alternatetext",
-            title: "Alternate Text",
+            name: "text",
+            title: "Text",
             type: "string",
         },
     ]
