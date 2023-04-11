@@ -1,8 +1,28 @@
+import { useEffect, useState } from "react";
 import { AiOutlineLaptop } from "react-icons/ai";
 
 import Skills from "./Skills";
 
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
+
 export default function Academic() {
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://${projectId}.api.sanity.io/v1/data/query/${dataset}?query=*[_type == 'skill']`);
+        const data = await response.json();
+        setSkills(data);
+      } catch (error) {
+        console.error("Failed to fetch data from Sanity:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="flex justify-center items-center mt-32">
@@ -11,7 +31,7 @@ export default function Academic() {
       <div className="grid place-items-center h-full text-white mt-32">
         <div className="grid gap-10 md:gap-20 items-center justify-center md:grid-cols-2">
           <div className="justify-self-center">
-            <Skills />
+            <Skills skills={skills} />
           </div>
           <div className="text-center md:text-left max-w-sm">
             <ol className="relative border-l border-vingo">

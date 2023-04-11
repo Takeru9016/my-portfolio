@@ -1,9 +1,13 @@
-interface Skills {
-    icon: Image;
+type Skill = {
+    icon: {
+        asset: {
+            url: string;
+        }
+    };
     text: string;
-}
+};
 
-interface Projects {
+type Projects = {
     title: string;
     imgUrl: Image;
     description: Block[];
@@ -11,7 +15,7 @@ interface Projects {
     link: string;
 }
 
-interface Block {
+type Block = {
     _key: string;
     _type: "block";
     children: Child[];

@@ -1,4 +1,4 @@
 import project from "./project";
-import skill from "./skill";
+import skills from "./skills";
 
-export const schemaTypes = [skill, project]
+export const schemaTypes = [skills, project]

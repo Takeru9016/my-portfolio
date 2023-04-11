@@ -1,23 +1,28 @@
 import Image from "next/image";
+
 import urlFor from "../../lib/sanity.client";
 
-type Props = {
-    skills: Skills[]
-}
+interface Props {
+    skills: Skill[];
+};
+
 
 export default function Skills({ skills }: Props) {
     return (
         <div>
-            Skills
-            {skills.map((skill, index) => (
-                <Image
-                    key={index}
-                    src={urlFor(skill.icon).url()}
-                    alt={skill.text}
-                    width={10}
-                    height={10}
-                />
-            ))}
+            {Array.isArray(skills) && skills.length > 0 ? (
+                skills?.map((skill, index) => (
+                    <Image
+                        key={index}
+                        src={urlFor(skill.icon).url()}
+                        alt={skill.text}
+                        width={30}
+                        height={30}
+                    />
+                ))
+            ) : (
+                <p>No skills data found.</p>
+            )}
         </div>
-    )
-}
+    );
+};

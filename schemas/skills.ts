@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 
 export default {
-    name: 'skill',
+    name: 'skills',
     title: 'Skills',
     type: 'document',
     fields: [
@@ -20,3 +20,4 @@ export default {
         },
     ]
 }
+
