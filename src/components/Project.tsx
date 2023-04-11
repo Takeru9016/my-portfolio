@@ -1,8 +1,8 @@
-type Props = {
-  projects: Projects[]
-}
+// type Props = {
+//   projects: Projects[]
+// }
 
-export default function Project({ projects }: Props) {
+export default function Project() {
   return (
     <div>Project</div>
   )
