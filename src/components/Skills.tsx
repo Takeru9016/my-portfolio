@@ -1,28 +1,50 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import urlFor, { client } from "../../lib/sanity.client";
 
-import urlFor from "../../lib/sanity.client";
+interface Skill {
+    icon: string;
+    text: string;
+}
 
-interface Props {
-    skills: Skill[];
-};
+export default function Skills() {
+    const [fetchedSkills, setFetchedSkills] = useState<Skill[]>([]);
 
+    useEffect(() => {
+        const fetchSkills = async () => {
+            try {
+                const query = `*[_type == 'skills']`;
+                const data = await client.fetch(query);
+                setFetchedSkills(data);
+            } catch (error) {
+                console.error("Failed to fetch skills data:", error);
+            }
+        };
 
-export default function Skills({ skills }: Props) {
+        fetchSkills();
+    }, []);
+
     return (
-        <div>
-            {Array.isArray(skills) && skills.length > 0 ? (
-                skills?.map((skill, index) => (
-                    <Image
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {Array.isArray(fetchedSkills) && fetchedSkills.length > 0 ? (
+                fetchedSkills.map((skill, index) => (
+                    <div
                         key={index}
-                        src={urlFor(skill.icon).url()}
-                        alt={skill.text}
-                        width={30}
-                        height={30}
-                    />
+                        className="flex flex-col items-center p-4 shadow-md"
+                    >
+                        <Image
+                            src={skill.icon ? urlFor(skill.icon).url() : ""}
+                            alt={skill.text}
+                            width={50}
+                            height={50}
+                            className="mb-2"
+                        />
+                        {/* <span className="text-center">{skill.text}</span> */}
+                    </div>
                 ))
             ) : (
                 <p>No skills data found.</p>
             )}
         </div>
     );
-};
+}
