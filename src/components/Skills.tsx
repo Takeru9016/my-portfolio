@@ -25,7 +25,7 @@ export default function Skills() {
     }, []);
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center">
             {Array.isArray(fetchedSkills) && fetchedSkills.length > 0 ? (
                 fetchedSkills.map((skill, index) => (
                     <div
