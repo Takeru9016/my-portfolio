@@ -25,7 +25,7 @@ export default function Skills() {
     }, []);
 
     return (
-        <div className="grid grid-cols-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center">
+        <div className="grid justify-center items-center grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {Array.isArray(fetchedSkills) && fetchedSkills.length > 0 ? (
                 fetchedSkills.map((skill, index) => (
                     <div
@@ -35,11 +35,10 @@ export default function Skills() {
                         <Image
                             src={skill.icon ? urlFor(skill.icon).url() : ""}
                             alt={skill.text}
-                            width={50}
-                            height={50}
+                            width={60}
+                            height={60}
                             className="mb-2"
                         />
-                        {/* <span className="text-center">{skill.text}</span> */}
                     </div>
                 ))
             ) : (
