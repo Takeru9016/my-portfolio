@@ -27,11 +27,17 @@ export default {
         {
             name: 'techstack',
             title: 'Tech Stack',
-            type: 'string'
+            type: 'array',
+            of: [{type: 'string'}]
         },
         {
             title: 'Link',
             name: 'link',
+            type: 'url'
+        },
+        {
+            title: 'Repo',
+            name: 'repo',
             type: 'url'
         }
     ]
