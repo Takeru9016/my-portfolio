@@ -1,25 +1,42 @@
-/* eslint-disable react/no-unescaped-entities */
-import { MdOutlineDownloadForOffline, MdOutlineArrowCircleRight } from "react-icons/md";
+import Image from "next/image";
+import {
+  MdOutlineDownloadForOffline,
+  MdOutlineArrowCircleRight,
+} from "react-icons/md";
 
-import { Avatar } from "@/assets";
+import { image } from "@/assets";
 
 export default function About() {
   return (
     <div className="grid place-items-center h-screen text-white">
       <div className="grid gap-10 items-center md:grid-cols-2">
         <div className="justify-self-center">
-          <Avatar />
+          <Image
+            className=""
+            src={image.avatar}
+            alt=""
+            width={300}
+            height={250}
+          />
         </div>
         <div className="text-center md:text-left">
           <h2 className="text-3xl font-bold mb-4">Sahil Jadhav 👋</h2>
 
-          <p className="mb-4 font-light text-base text-white/50">Front-end Developer | Back-end Developer | UI Designer</p>
+          <p className="mb-4 font-light text-base text-white/50">
+            Front-end Developer | Back-end Developer | UI Designer
+          </p>
 
           <div className="text-justify max-w-sm">
             <ul className="text-white leading-relaxed  list-disc mb-4">
-              <li>Experienced full-stack developer and UI designer with over 3 years of industry experience.</li>
+              <li>
+                Experienced full-stack developer and UI designer with over 3
+                years of industry experience.
+              </li>
               <br className="md:hidden" />
-              <li>Passionate about creating high-quality and performant software that delights users and meets business goals.</li>
+              <li>
+                Passionate about creating high-quality and performant software
+                that delights users and meets business goals.
+              </li>
             </ul>
           </div>
 
