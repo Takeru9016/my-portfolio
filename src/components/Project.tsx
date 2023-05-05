@@ -5,6 +5,7 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { groq } from "next-sanity";
 
 import urlFor, { client } from "../../lib/sanity.client";
+import Loader from "./Loader";
 
 type Project = {
   title: string;
@@ -67,7 +68,9 @@ export default function Project() {
       </div>
 
       {isLoading ? (
-        <p>Loading ...</p>
+        <div className="flex justify-center items-center">
+          <Loader />
+        </div>
       ) : currentProjects.length === 0 ? (
         <p>No Data Found.</p>
       ) : (
