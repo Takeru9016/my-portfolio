@@ -49,8 +49,8 @@ export default function Project() {
 
   return (
     <>
-      <div className="flex flex-row items-center justify-between mx-5 my-10 md:my-20 lg:my-32">
-        <h2 className="flex justify-center items-center gap-3 text-2xl font-bold rounded-xl bg-vingo/20 w-44 text-vingo md:ml-32 md:w-64 lg:w-80">
+      <div className="flex flex-row items-center justify-between mx-5 my-10">
+        <h2 className="flex justify-center items-center gap-3 text-2xl font-bold rounded-xl bg-vingo/20 w-fit px-7 py-2 text-vingo md:ml-32 md:w-fit md:px-7 md:py-2 lg:w-fit lg:px-7 lg:py-2">
           <SiVisualstudiocode className="text-blue-600" /> Projects
         </h2>
         <div className="flex justify-center items-center gap-5 md:mr-20 lg:mr-20 my-5 md:my-10 lg:my-16">

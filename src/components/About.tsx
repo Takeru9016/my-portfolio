@@ -1,8 +1,5 @@
 import Image from "next/image";
-import {
-  MdOutlineDownloadForOffline,
-  MdOutlineArrowCircleRight,
-} from "react-icons/md";
+import { MdOutlineDownloadForOffline } from "react-icons/md";
 
 import { image } from "@/assets";
 
@@ -44,10 +41,6 @@ export default function About() {
             <button className="px-4 py-2 bg-vingo/10 rounded-full text-lg text-vingo mr-4 mb-4 md:mb-0 w-full flex justify-center items-center gap-3">
               Download CV
               <MdOutlineDownloadForOffline className="w-5 h-5" />
-            </button>
-            <button className="px-4 py-2 bg-vingo/10 rounded-full text-lg text-vingo mr-4 mb-4 md:mb-0 w-full flex justify-center items-center gap-3">
-              Know more
-              <MdOutlineArrowCircleRight className="w-5 h-5" />
             </button>
           </div>
         </div>
