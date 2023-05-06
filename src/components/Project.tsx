@@ -49,11 +49,11 @@ export default function Project() {
 
   return (
     <>
-      <div className="flex items-center justify-between mx-5 my-10 md:my-20 lg:my-32">
-        <h2 className="flex justify-center items-center gap-3 ml-32 text-2xl font-bold rounded-xl bg-vingo/20 w-44 text-vingo">
+      <div className="flex flex-row items-center justify-between mx-5 my-10 md:my-20 lg:my-32">
+        <h2 className="flex justify-center items-center gap-3 text-2xl font-bold rounded-xl bg-vingo/20 w-44 text-vingo md:ml-32 md:w-64 lg:w-80">
           <SiVisualstudiocode className="text-blue-600" /> Projects
         </h2>
-        <div className="flex justify-center items-center gap-5 mr-44">
+        <div className="flex justify-center items-center gap-5 md:mr-20 lg:mr-20 my-5 md:my-10 lg:my-16">
           <BsChevronCompactLeft
             className={`${
               currentPage === 0 ? "disabled" : ""
@@ -74,7 +74,7 @@ export default function Project() {
       ) : currentProjects.length === 0 ? (
         <p>No Data Found.</p>
       ) : (
-        <div className="grid grid-cols-3 justify-center gap-5 w-fit mx-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-5 w-full md:w-fit mx-5 px-5 md:mx-24">
           {currentProjects.map((project) => (
             <div
               className="justify-center border-2 border-vingo/50 rounded-2xl"
@@ -94,7 +94,7 @@ export default function Project() {
               <div className="flex mt-5 flex-wrap gap-3">
                 {project.techstack.map((tech) => (
                   <p
-                    className="ml-3 bg-vingo/20 w-auto px-3 rounded-full text-vingo"
+                    className="ml-3 bg-vingo/20 w-auto px-3 rounded-full text-vingo text-xs md:text-sm"
                     key={tech}
                   >
                     {tech}
@@ -105,9 +105,9 @@ export default function Project() {
               <p className="mx-5 text-justify my-5">
                 {project.description[0].children[0].text}
               </p>
-              <div className="flex justify-center my-5 gap-28">
+              <div className="flex justify-center my-5 gap-10 md:gap-28">
                 <a
-                  className="border border-vingo w-auto px-5 rounded-full"
+                  className="border border-vingo w-auto px-5 rounded-full text-sm md:text-base"
                   target="_blank"
                   rel="noopener noreferrer"
                   href={project.link}
@@ -115,7 +115,7 @@ export default function Project() {
                   Demo
                 </a>
                 <a
-                  className="border border-vingo w-auto px-5 rounded-full"
+                  className="border border-vingo w-auto px-5 rounded-full text-sm md:text-base"
                   target="_blank"
                   rel="noopener noreferrer"
                   href={project.repo}
