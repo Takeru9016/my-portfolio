@@ -6,14 +6,13 @@ import { image } from "@/assets";
 export default function About() {
   return (
     <div className="grid place-items-center h-screen text-white">
-      <div className="grid gap-10 items-center md:grid-cols-2">
+      <div className="grid gap-32 items-center md:grid-cols-2">
         <div className="justify-self-center">
           <Image
-            className=""
             src={image.avatar}
-            alt=""
-            width={300}
-            height={250}
+            alt="avatar-logo"
+            width={350}
+            height={300}
           />
         </div>
         <div className="text-center md:text-left">

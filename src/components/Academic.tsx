@@ -10,11 +10,11 @@ export default function Academic() {
         <h2 className="flex justify-center items-center gap-5 rounded-full h-10 text-2xl bg-vingo/20 w-72 text-vingo"> <AiOutlineLaptop /> Skills • Academics</h2>
       </div>
       <div className="grid place-items-center h-full justify-center items-center text-white mt-32">
-        <div className="grid gap-10 md:gap-20 items-center md:grid-cols-2">
+        <div className="grid gap-10 md:gap-20 mx-5 md:mx-0 items-center md:grid-cols-2">
           <div className="justify-self-center">
             <Skills />
           </div>
-          <div className="text-center md:text-left max-w-sm">
+          <div className="text-center md:text-left max-w-sm ml-10 mb-20">
             <ol className="relative border-l border-vingo">
               <li className="mb-10 ml-4">
                 <div className="absolute w-3 h-3 bg-vingo rounded-full mt-1.5 -left-1.5 border border-vingo"></div>
