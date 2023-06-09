@@ -36,12 +36,12 @@ export default function About() {
             </ul>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-center md:justify-start">
+          {/* <div className="flex flex-col md:flex-row justify-center md:justify-start">
             <button className="px-4 py-2 bg-vingo/10 rounded-full text-lg text-vingo mr-4 mb-4 md:mb-0 w-full flex justify-center items-center gap-3">
               Download CV
               <MdOutlineDownloadForOffline className="w-5 h-5" />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
