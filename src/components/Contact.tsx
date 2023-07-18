@@ -1,6 +1,13 @@
 import Link from "next/link";
-import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
+
+import {
+  FaTwitter,
+  FaDiscord,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { SiMaildotru } from "react-icons/si";
+import { VscGithub } from "react-icons/vsc";
 
 export default function Contact() {
   const twitterUrl = process.env.NEXT_PUBLIC_TWITTER_URL;
@@ -20,18 +27,18 @@ export default function Contact() {
 
       <div className="flex justify-center items-center mt-20">
         <div className="bg-vingo/5 flex flex-col justify-center items-center p-8 md:p-14 lg:p-20 w-full md:w-[500px] rounded-xl">
-        <Link
+          <Link
             href={githubUrl ? githubUrl : ""}
             className="text-white flex justify-center items-center gap-5 px-5 py-5 bg-gradient-to-br from-[#24292F] to-white w-full md:w-72 rounded-full mb-5 md:mb-10"
           >
-            <FaInstagram />
+            <VscGithub />
             Connect on Github
           </Link>
           <Link
             href={linkedinUrl ? linkedinUrl : ""}
             className="text-white flex justify-center items-center gap-5 px-5 py-5 bg-gradient-to-br from-pink-500 to-orange-400 w-full md:w-72 rounded-full mb-5 md:mb-10"
           >
-            <FaInstagram />
+            <FaLinkedinIn />
             Connect on LinkedIn
           </Link>
           <Link
